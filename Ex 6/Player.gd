@@ -3,6 +3,7 @@ extends Area2D
 export var speed = 400 # A quina velocitat es mourà el jugador (píxels/seg). var screen_size # Mida de la finestra de joc
 
 func _ready():
+	print("hola")
 	screen_size = get_viewport_rect().size
 
 func _process(delta):
@@ -19,6 +20,7 @@ func _process(delta):
 		$AnimatedSprite.stop()
 		
 	position += velocity * delta
-	position.x = clamp(position.x, 0, screen_size.x) position.y = clamp(position.y, 0, screen_size.y)
+	position.x = clamp(position.x, 0, screen_size.x)
+	position.y = clamp(position.y, 0, screen_size.y)
 
 
